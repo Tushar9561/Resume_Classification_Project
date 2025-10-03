@@ -1,3 +1,4 @@
+!pip install joblib
 import streamlit as st
 import joblib
 import tensorflow as tf
@@ -8,7 +9,7 @@ model = tf.keras.models.load_model("resume_classifier.h5")
 tfidf_vector = joblib.load("tfidf_vectorizer.pkl")
 le = joblib.load("label_encoder.pkl")
 
-st.title( Resume Classification App")
+st.title("Resume Classification App")
 st.write("Upload or paste a resume and get its predicted category.")
 
 # Input: Resume text
